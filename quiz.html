@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quiz – Integrated Science Basic 3</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ========================================
+       NAVIGATION BAR
+       ======================================== -->
+  <nav class="navbar">
+    <a href="index.html" class="logo">
+      <span class="logo-icon">🔬</span> ScienceB3
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">🏠 Home</a></li>
+      <li><a href="course.html">📚 Topics</a></li>
+      <li><a href="videos.html">🎥 Videos</a></li>
+      <li><a href="quiz.html" class="active">🧩 Quiz</a></li>
+      <li><a href="extra.html">🎉 Fun</a></li>
+    </ul>
+  </nav>
+
+  <!-- ========================================
+       PAGE HERO BANNER
+       ======================================== -->
+  <section class="hero" style="padding: 56px 24px 64px;">
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="hero-emoji-row" style="font-size:2.2rem;">🧩 🏆 🌟 ✅</div>
+    <h1 style="font-size: clamp(1.8rem, 4vw, 3rem);">Science Quiz!</h1>
+    <p class="subtitle">
+      Choose a topic, then answer 10 questions — you have 30 seconds each! 🍀⏱️
+    </p>
+  </section>
+
+  <!-- ========================================
+       QUIZ CONTENT
+       ======================================== -->
+  <main class="container">
+    <div class="quiz-wrapper">
+
+      <!-- Quiz Rules Box -->
+      <div style="
+        background: white;
+        border-radius: 16px;
+        padding: 24px 28px;
+        margin-bottom: 32px;
+        box-shadow: 0 4px 16px rgba(46,204,113,0.12);
+        display: flex;
+        gap: 16px;
+        align-items: flex-start;
+        border-left: 6px solid #F1C40F;
+      ">
+        <span style="font-size:2.2rem;">📋</span>
+        <div>
+          <p style="font-family:'Fredoka One',cursive; color:#b7950b; font-size:1.15rem; margin-bottom:8px;">
+            Quiz Rules:
+          </p>
+          <p style="font-size:1rem; color:#5a7a5a; font-weight:600; line-height:1.7; margin:0;">
+            ✅ Choose a topic to begin.<br/>
+            ✅ There are <strong>10 questions</strong> per topic.<br/>
+            ✅ You have <strong>⏱️ 30 seconds</strong> per question — answer before time runs out!<br/>
+            ✅ The quiz auto-submits if you run out of time.<br/>
+            ✅ At the end, you will see your score!
+          </p>
+        </div>
+      </div>
+
+      <!-- Progress Bar (hidden until topic is chosen) -->
+      <div class="quiz-progress" style="display:none;">
+        <span id="progress-text">Question 1 of 10</span>
+        <div class="progress-bar-track">
+          <div class="progress-bar-fill" id="progress-fill"></div>
+        </div>
+        <span id="live-score" style="white-space:nowrap;">⭐ Score: 0</span>
+      </div>
+
+      <!-- Topic Selection Screen (built by JS) -->
+      <!-- #topic-select-screen is injected here by script.js -->
+
+      <!-- Quiz Question Area -->
+      <div id="quiz-container" style="display:none;">
+        <!-- Filled by JS -->
+      </div>
+
+      <!-- ========================================
+           FINAL SCORE SCREEN
+           ======================================== -->
+      <div class="score-screen" id="score-screen">
+
+        <!-- Celebration banner — shown only on pass -->
+        <div id="celebration-banner"></div>
+
+        <!-- Topic badge on score screen -->
+        <div id="score-topic-badge" style="margin-bottom:8px;"></div>
+
+        <div style="font-size:3.5rem; margin-bottom:16px;" id="score-emoji">🎉</div>
+
+        <div class="score-circle">
+          <span class="score-num" id="score-num">0/10</span>
+          <span class="score-lbl">Your Score</span>
+        </div>
+
+        <h2>Quiz Complete! 🏆</h2>
+        <p id="score-message">Well done! Keep learning!</p>
+
+        <!-- Accuracy percentage + bar -->
+        <div style="margin: 10px auto 4px; max-width:420px;">
+          <span id="accuracy-label" style="
+            font-size:1rem;
+            font-weight:700;
+            color:#5a7a5a;
+            display:block;
+            margin-bottom:6px;
+          ">0% correct</span>
+          <div class="accuracy-bar-wrap">
+            <div class="accuracy-bar-fill" id="accuracy-fill" style="width:0%"></div>
+          </div>
+        </div>
+
+        <!-- Stars -->
+        <div id="score-stars" style="margin:16px 0; font-size:2.5rem; letter-spacing:6px;"></div>
+
+        <!-- Question breakdown -->
+        <div class="breakdown">
+          <div class="breakdown-title">Question Breakdown</div>
+          <div id="score-breakdown"></div>
+        </div>
+
+        <!-- Action buttons -->
+        <div class="flex-center" style="margin-top:28px;">
+          <button class="btn btn-green" onclick="restartQuiz()">🔄 Try Another Topic</button>
+          <a href="extra.html" class="btn btn-yellow">🎉 Go to Fun Page</a>
+          <a href="course.html" class="btn btn-blue">📚 Review Topics</a>
+        </div>
+
+      </div><!-- end #score-screen -->
+
+    </div>
+  </main>
+
+  <!-- ========================================
+       FOOTER
+       ======================================== -->
+  <footer class="footer">
+    <div class="footer-emoji">🧩🌟🏆✅</div>
+    <p>Integrated Science for Basic 3 &nbsp;|&nbsp; Made for young scientists everywhere 🌟</p>
+  </footer>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
