@@ -4,6 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Topics – Integrated Science Basic 3</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
   <link rel="stylesheet" href="style.css" />
   <style>
     /* ── Topic Nav Pills ── */
@@ -203,17 +205,28 @@
   <!-- ========================================
        NAVIGATION BAR
        ======================================== -->
-  <nav class="navbar">
-    <a href="index.html" class="logo">
-      <span class="logo-icon">🔬</span> ScienceB3
-    </a>
-    <ul class="nav-links">
-      <li><a href="index.html">🏠 Home</a></li>
-      <li><a href="course.html" class="active">📚 Topics</a></li>
-      <li><a href="videos.html">🎥 Videos</a></li>
-      <li><a href="quiz.html">🧩 Quiz</a></li>
-      <li><a href="extra.html">🎉 Fun</a></li>
-    </ul>
+  <nav class="navbar navbar-expand-lg site-navbar">
+    <div class="container-fluid">
+      <a href="index.html" class="brand">
+        <span class="brand-icon">&#128300;</span> ScienceB3
+      </a>
+      <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav mx-auto gap-1">
+          <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+          <li class="nav-item"><a href="course.html" class="nav-link active">Topics</a></li>
+          <li class="nav-item"><a href="videos.html" class="nav-link">Videos</a></li>
+          <li class="nav-item"><a href="quiz.html" class="nav-link">Quiz</a></li>
+          <li class="nav-item"><a href="extra.html" class="nav-link">Fun</a></li>
+        </ul>
+        <div class="portal-btns mt-2 mt-lg-0">
+          <a href="student-login.html" class="portal-btn portal-btn-student">Student Portal</a>
+          <a href="teacher-login.html" class="portal-btn portal-btn-teacher">Teacher Portal</a>
+        </div>
+      </div>
+    </div>
   </nav>
 
   <!-- ========================================
